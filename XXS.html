@@ -1,0 +1,13 @@
+<!-- 오염된 데이터가 들어왔을 때(Cross-site scripting) 다른 사용자에게 노출되지 않게 하기 -->
+<html>
+    <body>
+        <script>
+            alert('hi');
+        </script>
+        <!-- html에서 꺽새는 태그의 시작을 알리는 기호
+        태그의 시작을 알리는 것이 아니라 꺽새 자체를 나타내려면(문법적인 역할 못하게) -->
+        &lt;script&gt;
+          alert('hi');
+        &lt;/script&gt;   
+    </body>
+</html>
